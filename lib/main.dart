@@ -8,50 +8,76 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'How\'s your mood?',
       home: Scaffold(
-          backgroundColor: Colors.yellowAccent[100],
+          backgroundColor: Colors.yellow[50],
           appBar: AppBar(
             title: Text('How\'s your mood?'),
           ),
           body: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 75.0),
+                  padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 75.0),
                   child: Row(
                     children: <Widget>[
                       Column(
                         children: [
-                          Icon(Icons.sentiment_very_satisfied,
-                              color: Colors.pink[300], size: 70),
-                          Text('Elated'),
+                          IconButton(
+                              icon: Icon(Icons.sentiment_very_satisfied),
+                              color: Colors.pink[300],
+                              iconSize: 60,
+                              onPressed: () {
+                                print("Elated!");
+                              }),
+                          Text('WhooHoo'),
                         ],
                       ),
                       Column(
                         children: [
-                          Icon(Icons.sentiment_satisfied,
-                              color: Colors.orange, size: 70),
+                          IconButton(
+                              icon: Icon(Icons.sentiment_satisfied),
+                              color: Colors.orange,
+                              iconSize: 60,
+                              onPressed: () {
+                                print("Sweet!");
+                              }),
                           Text('Happy'),
                         ],
                       ),
                       Column(
                         children: [
-                          Icon(Icons.sentiment_neutral,
-                              color: Colors.cyan[300], size: 70),
+                          IconButton(
+                              icon: Icon(Icons.sentiment_neutral),
+                              color: Colors.cyan[300],
+                              iconSize: 60,
+                              onPressed: () {
+                                print("Blah");
+                              }),
                           Text('Fine'),
                         ],
                       ),
                       Column(
                         children: [
-                          Icon(Icons.sentiment_dissatisfied,
-                              color: Colors.blue, size: 70),
+                          IconButton(
+                              icon: Icon(Icons.sentiment_dissatisfied),
+                              color: Colors.blue[300],
+                              iconSize: 60,
+                              onPressed: () {
+                                print("Sigh");
+                              }),
                           Text('Sad'),
                         ],
                       ),
                       Column(
                         children: [
-                          Icon(Icons.sentiment_very_dissatisfied,
-                              color: Colors.red, size: 70),
+                          IconButton(
+                              icon: Icon(Icons.sentiment_very_dissatisfied),
+                              color: Colors.red,
+                              iconSize: 60,
+                              onPressed: () {
+                                print("GRRRRRH!");
+                              }),
                           Text('Angry'),
                         ],
                       ),
